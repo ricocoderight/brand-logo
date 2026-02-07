@@ -1,24 +1,35 @@
-# Brand Logo
+# Brand Logo - Mchungaji Podcast
 
-A youthful, modern brand logo for podcasts featuring a vibrant purple-pink gradient with a microphone icon and sound waves.
+A personalized, caricature-style brand logo for the Mchungaji podcast featuring a young African man in a podcast studio setting.
 
 ## Logo Files
 
-- **brand-logo.jpg** - The main logo file (1000x1000px, JPEG format)
+- **brand-logo.jpg** - The personalized logo file (1000x1000px, JPEG format)
 
 ## Features
 
-- Vibrant purple-to-pink gradient background
-- Modern microphone icon design
-- Concentric sound wave circles
-- Audio level visualization bars
-- "PODCAST" text with outline effect
+- Warm studio atmosphere with gradient background
+- Caricature-style illustration of a young African man
+- Professional headphones with red accents
+- Studio microphone with sound wave effects
+- "MCHUNGAJI" brand name prominently displayed
+- "PODCAST" subtitle
 - High resolution (1000x1000px)
 - Optimized JPEG format for easy sharing
 
+## Design Elements
+
+The logo features:
+- A friendly, cartoon-style caricature
+- Warm brown/orange studio background
+- Professional over-ear headphones
+- Studio microphone on boom arm
+- Sound wave visual effects
+- Bold brand typography with shadow effects
+
 ## Usage
 
-Simply download the `brand-logo.jpg` file and use it for your podcast branding needs!
+Simply download the `brand-logo.jpg` file and use it for your Mchungaji podcast branding needs!
 
 ## Regenerating the Logo
 
