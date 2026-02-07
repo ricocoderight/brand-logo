@@ -213,26 +213,32 @@ def create_podcast_logo(output_path='brand-logo.jpg', size=1000):
     )
     
     # Mic mesh/grille
-    for i in range(-3, 4):
+    GRILLE_LINES = 7
+    GRILLE_START_Y = -60
+    GRILLE_SPACING = 10
+    GRILLE_WIDTH = 40
+    
+    for i in range(GRILLE_LINES):
+        y_pos = mic_y + GRILLE_START_Y + i * GRILLE_SPACING
         draw.line(
-            [(mic_x - 20, mic_y - 60 + i*10),
-             (mic_x + 20, mic_y - 60 + i*10)],
+            [(mic_x - GRILLE_WIDTH // 2, y_pos),
+             (mic_x + GRILLE_WIDTH // 2, y_pos)],
             fill=(100, 100, 100),
             width=2
         )
     
     # SOUND WAVES (visual effect around microphone)
-    wave_color = (255, 200, 100, 128)
     for i in range(3):
         radius = 40 + i * 30
         overlay = Image.new('RGBA', (size, size), (255, 255, 255, 0))
         overlay_draw = ImageDraw.Draw(overlay)
+        alpha = 60 - i * 15
         overlay_draw.arc(
             [mic_x - radius, mic_y - radius,
              mic_x + radius, mic_y + radius],
             start=180,
             end=360,
-            fill=(255, 200, 100, 60 - i*15),
+            fill=(255, 200, 100, alpha),
             width=3
         )
         img.paste(Image.alpha_composite(img.convert('RGBA'), overlay).convert('RGB'))
@@ -271,9 +277,16 @@ def create_podcast_logo(output_path='brand-logo.jpg', size=1000):
         draw.text((text_x_sub, text_y_sub), subtitle, 
                  fill=(255, 255, 255), font=font_small)
         
-    except (IOError, OSError):
-        # Fallback if font isn't available - just use default
-        pass
+    except (IOError, OSError) as e:
+        # Font not available - use default font as fallback
+        print(f"Warning: Custom font not available ({e}). Using default font.")
+        # Try with default font
+        text = "MCHUNGAJI"
+        bbox = draw.textbbox((0, 0), text)
+        text_width = bbox[2] - bbox[0]
+        text_x = (size - text_width) // 2
+        text_y = 80
+        draw.text((text_x, text_y), text, fill=(255, 220, 100))
     
     # Save as JPEG
     img.save(output_path, 'JPEG', quality=95)
