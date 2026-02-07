@@ -4,13 +4,13 @@
 
 Your youthful podcast logos are ready! You have two versions:
 
-1. **podcast_logo.jpg** (1000x1000 pixels, 83KB)
+1. **podcast_logo.jpg** (1000x1000 pixels, ~80KB)
    - Perfect for YouTube thumbnails
    - Social media posts
    - Video overlays
    - Website headers
 
-2. **podcast_logo_hd.jpg** (2000x2000 pixels, 187KB)
+2. **podcast_logo_hd.jpg** (2000x2000 pixels, ~190KB)
    - High-resolution for printing
    - Large format displays
    - Professional branding materials

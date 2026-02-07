@@ -43,14 +43,14 @@ Youthful and unique podcast logo designed for modern content creators.
 - **Dimensions**: 1000 × 1000 pixels
 - **Format**: JPEG
 - **Quality**: 95%
-- **File Size**: ~83KB
+- **File Size**: ~80KB
 - **Use Case**: Digital media, videos, social media
 
 ### HD Version (podcast_logo_hd.jpg)
 - **Dimensions**: 2000 × 2000 pixels
 - **Format**: JPEG
 - **Quality**: 95%
-- **File Size**: ~187KB
+- **File Size**: ~190KB
 - **Use Case**: Printing, large displays, scalable branding
 
 ## Usage Guidelines

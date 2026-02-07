@@ -128,14 +128,24 @@ def create_podcast_logo(output_path='podcast_logo.jpg', size=1000):
     
     # Try to add text, but handle if font is not available
     try:
-        # Try to use a bold font if available
-        try:
-            font_large = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", int(size * 0.12))
-            font_small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", int(size * 0.05))
-        except:
-            # Fallback to default font
+        # Try to use a bold font if available (cross-platform)
+        font_large = None
+        font_paths = [
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",  # Linux
+            "/System/Library/Fonts/Helvetica.ttc",  # macOS
+            "C:\\Windows\\Fonts\\arialbd.ttf",  # Windows
+        ]
+        
+        for font_path in font_paths:
+            try:
+                font_large = ImageFont.truetype(font_path, int(size * 0.12))
+                break
+            except:
+                continue
+        
+        # Fallback to default font if no system font found
+        if font_large is None:
             font_large = ImageFont.load_default()
-            font_small = ImageFont.load_default()
         
         # Add "PODCAST" text at the bottom of the circle
         text = "PODCAST"
