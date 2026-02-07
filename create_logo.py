@@ -125,7 +125,7 @@ def create_podcast_logo(output_path='brand-logo.jpg', size=1000):
                          fill=outline_color, font=font)
         
         draw.text((text_x, text_y), text, fill=(255, 255, 255), font=font)
-    except:
+    except (IOError, OSError):
         # Fallback if font isn't available - just use default
         pass
     
